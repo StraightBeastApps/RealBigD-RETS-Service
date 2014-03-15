@@ -1,0 +1,42 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.springframework.batch:RealBigDRETS:war:1.0.0.M1
+[WARNING] 'dependencies.dependency.systemPath' for com.straitbeast.realbigd.rets.trulia:trulia-rets-client-with-dependencies:jar should not point at files within the project directory, ${project.basedir}/dependencies/trulia-java-rets-client-local-jar-with-dependencies.jar will be unresolvable by dependent projects @ line 21, column 18
+[WARNING] 'dependencies.dependency.systemPath' for com.straitbeast.realbigd.rets.trulia:trulia-rets-client:jar should not point at files within the project directory, ${project.basedir}/dependencies/trulia-java-rets-client-1.0-SNAPSHOT.jar will be unresolvable by dependent projects @ line 28, column 18
+[WARNING] 'build.plugins.plugin.version' for org.mortbay.jetty:maven-jetty-plugin is missing. @ line 125, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ org.springframework.batch:spring-batch-admin-parent:1.0.0.M1, C:\Users\Travesty\.m2\repository\org\springframework\batch\spring-batch-admin-parent\1.0.0.M1\spring-batch-admin-parent-1.0.0.M1.pom, line 151, column 12
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-plugin is missing. @ org.springframework.batch:spring-batch-admin-parent:1.0.0.M1, C:\Users\Travesty\.m2\repository\org\springframework\batch\spring-batch-admin-parent\1.0.0.M1\spring-batch-admin-parent-1.0.0.M1.pom, line 159, column 12
+[WARNING] The expression ${pom.version} is deprecated. Please use ${project.version} instead.
+[WARNING] The expression ${pom.version} is deprecated. Please use ${project.version} instead.
+[WARNING] 'reporting.plugins.plugin.version' for org.apache.maven.plugins:maven-jxr-plugin is missing. @ org.springframework.batch:spring-batch-admin-parent:1.0.0.M1, C:\Users\Travesty\.m2\repository\org\springframework\batch\spring-batch-admin-parent\1.0.0.M1\spring-batch-admin-parent-1.0.0.M1.pom, line 176, column 12
+[WARNING] 'reporting.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-report-plugin is missing. @ org.springframework.batch:spring-batch-admin-parent:1.0.0.M1, C:\Users\Travesty\.m2\repository\org\springframework\batch\spring-batch-admin-parent\1.0.0.M1\spring-batch-admin-parent-1.0.0.M1.pom, line 182, column 12
+[WARNING] 'reporting.plugins.plugin.version' for org.apache.maven.plugins:maven-javadoc-plugin is missing. @ org.springframework.batch:spring-batch-admin-parent:1.0.0.M1, C:\Users\Travesty\.m2\repository\org\springframework\batch\spring-batch-admin-parent\1.0.0.M1\spring-batch-admin-parent-1.0.0.M1.pom, line 192, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Web Sample 1.0.0.M1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install-file (default-cli) @ RealBigDRETS ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 0.321s
+[INFO] Finished at: Wed Mar 12 02:11:33 EDT 2014
+[INFO] Final Memory: 3M/15M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file (default-cli) on project RealBigDRETS: The artifact information is incomplete or not valid:
+[ERROR] [0]  'groupId' is missing.
+[ERROR] [1]  'artifactId' is missing.
+[ERROR] [2]  'version' is missing.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
