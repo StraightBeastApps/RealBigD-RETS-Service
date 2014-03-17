@@ -3,7 +3,7 @@ package com.straightbeast.realbigd.rets.readers;
 import org.realtors.rets.client.SearchResultImpl;
 import org.springframework.batch.item.ItemReader;
 
-public class GreenvilleReader implements ItemReader<SearchResultImpl> {
+public class GreenvilleReader implements ItemReader<String> {
 	
 	private static final int MAX_OUTER = 0;
 
@@ -16,8 +16,8 @@ public class GreenvilleReader implements ItemReader<SearchResultImpl> {
 	/**
 	 * Reads next record from input
 	 */
-	 public synchronized SearchResultImpl read() throws Exception {
-		 SearchResultImpl response = null;
+	 public synchronized String read() throws Exception {
+		 String response = null;
 		 
 		if (index >= input.length) {
 			outer++;
