@@ -21,13 +21,6 @@
   			<systemPath>${project.basedir}/dependencies/trulia-java-rets-client-local-jar-with-dependencies.jar</systemPath>
 		</dependency>
 		<dependency>
-  			<groupId>com.straitbeast.realbigd.rets.trulia</groupId>
-  			<artifactId>trulia-rets-client</artifactId>
-  			<version>1.0</version>
-  			<scope>system</scope>
-  			<systemPath>${project.basedir}/dependencies/trulia-java-rets-client-1.0-SNAPSHOT.jar</systemPath>
-		</dependency>
-		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>
