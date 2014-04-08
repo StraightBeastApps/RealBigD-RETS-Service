@@ -1,0 +1,6 @@
+
+Install this dependency: 
+Download from: https://github.com/trulia/trulia-java-rets-client 
+	Note: You must download the zip and extract the jar-with-dependencies
+mvn install:install-file -Dfile=./trulia-java-rets-client-local-jar-with-dependencies.jar -DgroupId=org.realtors.rets.client -DartifactId=trulia-rets-client-with-dependencies -Dversion=1.0 -Dpackaging=jar
+

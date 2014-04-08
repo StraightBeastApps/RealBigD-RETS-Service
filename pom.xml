@@ -14,11 +14,9 @@
 	
 	<dependencies>
 		<dependency>
-  			<groupId>com.straitbeast.realbigd.rets.trulia</groupId>
+  			<groupId>org.realtors.rets.client</groupId>
   			<artifactId>trulia-rets-client-with-dependencies</artifactId>
   			<version>1.0</version>
-  			<scope>system</scope>
-  			<systemPath>${project.basedir}/dependencies/trulia-java-rets-client-local-jar-with-dependencies.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -140,10 +138,6 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
-		
-		<repository>
-    		<id>LocalDependencies</id>
-    		<url>file://${basedir}/dependencies</url>
-  		</repository>
+	
 	</repositories>
 </project>
