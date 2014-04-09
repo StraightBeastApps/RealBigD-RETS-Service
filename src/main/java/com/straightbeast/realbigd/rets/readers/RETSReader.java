@@ -1,9 +1,18 @@
 package com.straightbeast.realbigd.rets.readers;
 
+import java.net.MalformedURLException;
+
+import org.apache.commons.lang.StringUtils;
+import org.realtors.rets.client.CommonsHttpClient;
+import org.realtors.rets.client.RetsException;
+import org.realtors.rets.client.RetsHttpClient;
+import org.realtors.rets.client.RetsSession;
+import org.realtors.rets.client.RetsVersion;
+import org.realtors.rets.client.SearchRequest;
 import org.realtors.rets.client.SearchResultImpl;
 import org.springframework.batch.item.ItemReader;
 
-public class GreenvilleReader implements ItemReader<String> {
+public class RETSReader implements ItemReader<SearchResultImpl> {
 	
 	private static final int MAX_OUTER = 0;
 
@@ -15,7 +24,9 @@ public class GreenvilleReader implements ItemReader<String> {
 
 	/**
 	 * Reads next record from input
+	 * @return 
 	 */
+	/*
 	 public synchronized String read() throws Exception {
 		 String response = null;
 		 
@@ -29,9 +40,9 @@ public class GreenvilleReader implements ItemReader<String> {
 		}
 		return response;
 	}
+	*/
 	
-	/*
-	public synchronized void read() throws MalformedURLException {
+	public synchronized SearchResultImpl read() throws MalformedURLException {
 
 	    //Create a RetsHttpClient (other constructors provide configuration i.e. timeout, gzip capability)
 	    RetsHttpClient httpClient = new CommonsHttpClient();
@@ -67,7 +78,7 @@ public class GreenvilleReader implements ItemReader<String> {
 	    //Set request to retrieve count if desired
 	    request.setCountFirst();
 
-	    SearchResultImpl response;
+	    SearchResultImpl response = null;
 	    try {
 	        //Execute the search
 	        response = (SearchResultImpl) session.search(request);
@@ -97,7 +108,8 @@ public class GreenvilleReader implements ItemReader<String> {
 	            }
 	        }
 	    }
+		return response;
 	}
-	*/
+	
 }
 

@@ -7,7 +7,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.batch.admin.sample.ExampleItemWriter;
 import org.springframework.batch.item.ItemWriter;
 
-public class GreenvilleWriter implements ItemWriter<Object> {
+public class RETSWriter implements ItemWriter<Object> {
 
 	private static final Log log = LogFactory.getLog(ExampleItemWriter.class);
 	private boolean fail = false;

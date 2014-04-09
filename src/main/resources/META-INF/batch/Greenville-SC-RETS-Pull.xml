@@ -14,17 +14,17 @@
 	  		</tasklet>
 		</step>
 	</job>
-
+	
 	<bean id="RETSDataStream" 
-		class="com.straightbeast.realbigd.rets.readers.GreenvilleReader">
+		class="com.straightbeast.realbigd.rets.readers.RETSReader">
 	</bean>
 	
 	<bean id="RETSDataWriter" 
-		class="com.straightbeast.realbigd.rets.writers.GreenvilleWriter">
+		class="com.straightbeast.realbigd.rets.writers.RETSWriter">
 	</bean>
 	
 	<bean id="RETSDataProcessor" 
-		class="com.straightbeast.realbigd.rets.processors.GreenvilleProcessor">
+		class="com.straightbeast.realbigd.rets.processors.RETSProcessor">
 	</bean>
 	
 	<bean id="simpleJob" class="org.springframework.batch.core.job.SimpleJob"
