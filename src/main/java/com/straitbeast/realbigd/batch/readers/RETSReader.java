@@ -1,4 +1,4 @@
-package com.straightbeast.realbigd.rets.readers;
+package com.straitbeast.realbigd.batch.readers;
 
 import java.net.MalformedURLException;
 
@@ -13,34 +13,6 @@ import org.realtors.rets.client.SearchResultImpl;
 import org.springframework.batch.item.ItemReader;
 
 public class RETSReader implements ItemReader<SearchResultImpl> {
-	
-	private static final int MAX_OUTER = 0;
-
-	private String[] input = { "Hello", "world!", "Wow", "that's", "cool!" };
-
-	private int index = 0;
-
-	private int outer = 0;
-
-	/**
-	 * Reads next record from input
-	 * @return 
-	 */
-	/*
-	 public synchronized String read() throws Exception {
-		 String response = null;
-		 
-		if (index >= input.length) {
-			outer++;
-			if (outer > MAX_OUTER) {
-				return null;
-			} else {
-				index = 0;
-			}
-		}
-		return response;
-	}
-	*/
 	
 	public synchronized SearchResultImpl read() throws MalformedURLException {
 
@@ -112,4 +84,3 @@ public class RETSReader implements ItemReader<SearchResultImpl> {
 	}
 	
 }
-

@@ -1,5 +1,0 @@
-
-Install this dependency: 
-Place the rets-client-local-jar-with-dependencies.jar into a folder an run the mvn command into a folder below. 
-mvn install:install-file -Dfile=./rets-client-local-jar-with-dependencies.jar -DgroupId=org.realtors.rets.client -DartifactId=trulia-rets-client-with-dependencies -Dversion=1.0 -Dpackaging=jar
-
