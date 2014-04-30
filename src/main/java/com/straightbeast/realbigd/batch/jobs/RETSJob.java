@@ -1,4 +1,6 @@
-package com.straitbeast.realbigd.batch.jobs;
+package com.straightbeast.realbigd.batch.jobs;
+
+import java.util.List;
 
 import org.realtors.rets.client.SearchResultImpl;
 import org.springframework.batch.core.Job;
@@ -12,10 +14,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.straitbeast.realbigd.batch.config.InfrastructureConfiguration;
-import com.straitbeast.realbigd.batch.processors.RETSProcessor;
-import com.straitbeast.realbigd.batch.readers.RETSReader;
-import com.straitbeast.realbigd.batch.writers.RETSWriter;
+import com.straightbeast.realbigd.batch.config.InfrastructureConfiguration;
+import com.straightbeast.realbigd.batch.processors.RETSProcessor;
+import com.straightbeast.realbigd.batch.readers.RETSReader;
+import com.straightbeast.realbigd.batch.writers.RETSWriter;
+import com.straightbeast.realbigd.persistence.dto.ResidentialDTO;
 
 @Configuration
 public class RETSJob {
@@ -43,7 +46,7 @@ public class RETSJob {
 	@Bean
 	public Step step(){
 		return stepBuilders.get("step")
-				.<SearchResultImpl,SearchResultImpl>chunk(1)
+				.<SearchResultImpl,List<ResidentialDTO>>chunk(1)
 				.reader(reader())
 				.processor(processor())
 				.writer(writer())
@@ -54,11 +57,11 @@ public class RETSJob {
 		return new RETSReader();
 	}
 	
-	private ItemProcessor<SearchResultImpl,SearchResultImpl> processor() {
+	private ItemProcessor<SearchResultImpl,List<ResidentialDTO>> processor() {
 		return new RETSProcessor();
 	}
 	
-	private ItemWriter<SearchResultImpl> writer() {
+	private ItemWriter<List<ResidentialDTO>> writer() {
 		return new RETSWriter();
 	}
 	

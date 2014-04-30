@@ -1,4 +1,4 @@
-package com.straitbeast.realbigd.batch.config;
+package com.straightbeast.realbigd.batch.config;
 
 import javax.sql.DataSource;
 

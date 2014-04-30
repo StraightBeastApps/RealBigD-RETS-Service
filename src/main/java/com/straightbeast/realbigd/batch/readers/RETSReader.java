@@ -1,4 +1,4 @@
-package com.straitbeast.realbigd.batch.readers;
+package com.straightbeast.realbigd.batch.readers;
 
 import java.net.MalformedURLException;
 
