@@ -14,10 +14,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import processors.RETSProcessor;
+import readers.RETSReader;
+import writers.RETSWriter;
+
 import com.straightbeast.realbigd.batch.config.InfrastructureConfiguration;
-import com.straightbeast.realbigd.batch.processors.RETSProcessor;
-import com.straightbeast.realbigd.batch.readers.RETSReader;
-import com.straightbeast.realbigd.batch.writers.RETSWriter;
 import com.straightbeast.realbigd.persistence.dto.ResidentialDTO;
 
 @Configuration
